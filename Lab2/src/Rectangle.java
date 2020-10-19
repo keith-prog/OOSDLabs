@@ -3,10 +3,14 @@ public class Rectangle {
 
 	private double width;
 	private double length;
+	private int area;
+	private int perimeter; 
 	
 	public Rectangle() {
 		setWidth(1);
 		setLength(1);
+		setArea(1);
+		setPerimeter(1);
 	}
 	
 	
@@ -15,9 +19,47 @@ public class Rectangle {
 	 * @param width
 	 * @param length
 	 */
-	public Rectangle(double width, double length) {
+	public Rectangle(double width, double length, int area, int perimeter) {
 		setWidth(width);
 		setLength(length);
+		setArea(area);
+		setPerimeter(perimeter);
+	}
+
+
+
+	/**
+	 * @return the area
+	 */
+	public int getArea() {
+		return area;
+	}
+
+
+
+	/**
+	 * @param area the area to set
+	 */
+	public void setArea(int area) {
+		this.area = area;
+	}
+
+
+
+	/**
+	 * @return the perimeter
+	 */
+	public int getPerimeter() {
+		return perimeter;
+	}
+
+
+
+	/**
+	 * @param perimeter the perimeter to set
+	 */
+	public void setPerimeter(int perimeter) {
+		this.perimeter = perimeter;
 	}
 
 
@@ -60,5 +102,24 @@ public class Rectangle {
 		}
 	}
 	
+	public void printRectangle(int width, int length){
 	
-}
+		for(int i = 1 ; i<=length; i++)
+	     {
+	       for(int j = 1; j<=width; j++)
+	       {
+	    	   if(i==1||i==length|| j==1|| j==width)
+	    	   {
+	    		   System.out.print("*");
+	    	   }
+	    	   else
+	    	   {
+	    		   System.out.print(" ");
+	    	   }
+	       }
+	System.out.print("\n");
+	     }
+	}
+}	
+	
+
